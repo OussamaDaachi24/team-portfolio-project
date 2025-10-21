@@ -1,2 +1,37 @@
-# team-portfolio-project
-a public repository for creating a portfolio representing the SWE G9-1 team , in a collaborative environment
+# 🧑‍💻 Team Portfolio Project
+
+A **public repository** for collaboratively building a portfolio website representing the **SWE G9-1 Team**.
+
+## 👥 Team Members
+
+| Name | Role | GitHub Username |
+|------|------|-----------------|
+| **Daachi Oussama** | Team Leader | [OussamaDaachi24](https://github.com/OussamaDaachi24) |
+| **Chebaani Youcef** | Member | [Sad-Chemloul-Alaa](https://github.com/Sad-Chemloul-Alaa) |
+| **Saad-Chemloul Alaa** | Member | [YoucefJimmy](https://github.com/YoucefJimmy) |
+| **Khellaf Dhoha** | Member | [khDhoha](https://github.com/khDhoha) |
+| **Redhoua Ghezlene** | Member | [GhezleneGasmi](https://github.com/GhezleneGasmi) |
+
+---
+
+## 🎯 Project Description
+
+This repository is created as part of the **Software Engineering (TD 2)** course to practice **collaborative development** using **Git** and **GitHub**.  
+The goal is to design, implement, and deploy a **team portfolio website** using the **feature-branch workflow** and **GitHub Pages**.
+
+---
+
+## ⚙️ Tech Stack
+
+- HTML  
+- CSS  
+- Git & GitHub  
+
+---
+
+## 🌐 Deployment
+
+The project will be deployed via **GitHub Pages** once finalized.  
+Deployment link: _Coming soon..._
+
+---
