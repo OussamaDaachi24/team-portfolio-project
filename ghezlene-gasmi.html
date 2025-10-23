@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gasmi Ghezlene 🌸</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+      min-height: 100vh;
+      color: #fff;
+      position: relative;
+      overflow-x: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+    }
+
+    /* Floating Background Animation */
+    .background-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.4;
+      animation: float 25s infinite ease-in-out;
+    }
+
+    .circle-1 {
+      width: 500px;
+      height: 500px;
+      top: -10%;
+      left: -5%;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      animation-delay: 0s;
+    }
+
+    .circle-2 {
+      width: 400px;
+      height: 400px;
+      top: 50%;
+      right: -10%;
+      background: linear-gradient(135deg, #f093fb, #f5576c);
+      animation-delay: 8s;
+    }
+
+    .circle-3 {
+      width: 450px;
+      height: 450px;
+      bottom: -15%;
+      left: 40%;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      animation-delay: 16s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+      33% { transform: translate(100px, -80px) scale(1.1) rotate(120deg); }
+      66% { transform: translate(-80px, 100px) scale(0.9) rotate(240deg); }
+    }
+
+    /* Profile Card */
+    .profile-card {
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-radius: 30px;
+      padding: 60px 40px;
+      text-align: center;
+      max-width: 900px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 1s ease-out forwards;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .profile-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, #ffffff 0%, #a8edea 50%, #fed6e3 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.05rem;
+      opacity: 0.9;
+      margin-bottom: 30px;
+      line-height: 1.7;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin: 40px 0 15px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #a8edea;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    .badges img {
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .badges img:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+    }
+
+    .connect a img {
+      margin: 10px;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .connect a img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 16px rgba(255, 255, 255, 0.3);
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 30px;
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      letter-spacing: 0.5px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .back:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Background Animation -->
+  <div class="background-animation">
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+    <div class="circle circle-3"></div>
+  </div>
+
+  <!-- Profile Card -->
+  <div class="profile-card">
+    <h1>Hi there, I'm Gasmi Ghezlene 🌸</h1>
+    <p>3rd-year Artificial Intelligence student at <strong>ENSIA</strong> 🎓<br>
+      Passionate about blending <em>technology, creativity, and design</em> to build elegant digital experiences.
+    </p>
+
+    <h2> Tech & Tools</h2>
+    <div class="badges">
+      <img src="https://img.shields.io/badge/React-%23C9A8B0?style=for-the-badge&logo=react&logoColor=black" alt="React" />
+      <img src="https://img.shields.io/badge/TypeScript-%23DAB6C4?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+      <img src="https://img.shields.io/badge/Next.js-%23B38B8B?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+      <img src="https://img.shields.io/badge/Flutter-%23C9A8B0?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter" />
+      <img src="https://img.shields.io/badge/Bootstrap-%23A9746E?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
+      <img src="https://img.shields.io/badge/TailwindCSS-%23DAB6C4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="TailwindCSS" />
+      <img src="https://img.shields.io/badge/MySQL-%23D8A1C4?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
+      <img src="https://img.shields.io/badge/Oracle-%23A9746E?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle" />
+      <img src="https://img.shields.io/badge/PHP-%23777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
+      <img src="https://img.shields.io/badge/Figma-%23D8A1C4?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" />
+      <img src="https://img.shields.io/badge/Notion-%23F5F5DC?style=for-the-badge&logo=notion&logoColor=black" alt="Notion" />
+      <img src="https://img.shields.io/badge/C++-%23A0522D?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++" />
+      <img src="https://img.shields.io/badge/NumPy-%23C9A8B0?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" />
+      <img src="https://img.shields.io/badge/Pandas-%23DAB6C4?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" />
+      <img src="https://img.shields.io/badge/Matplotlib-%23B38B8B?style=for-the-badge&logo=plotly&logoColor=white" alt="Matplotlib" />
+      <img src="https://img.shields.io/badge/Python-%23D8A1C4?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+      <img src="https://img.shields.io/badge/JavaScript-%23F0D9FF?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+      <img src="https://img.shields.io/badge/HTML5-%23E8CFC1?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+      <img src="https://img.shields.io/badge/CSS3-%23F5E6D3?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+    </div>
+
+    <h2> Let's Connect</h2>
+    <div class="connect">
+      <a href="https://github.com/ghezlen18" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-%230f0c29?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+      </a>
+      <a href="https://www.youtube.com/@itsghezlene6686" target="_blank">
+        <img src="https://img.shields.io/badge/YouTube-%23f093fb?style=for-the-badge&logo=youtube&logoColor=red" alt="YouTube" />
+      </a>
+      <a href="https://www.linkedin.com/in/gasmi-ghezlene-842958322" target="_blank">
+        <img src="https://img.shields.io/badge/LinkedIn-%23302b63?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+      </a>
+    </div>
+
+    <a href="/team-portfolio-project/index.html" class="back">⬅ Back to Team Page</a>
+  </div>
+</body>
+</html> 
