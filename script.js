@@ -9,11 +9,11 @@ const teamMembers = [
     },
     {
         name: "Sad-Chemloul Alaa ",
-        role: "",
-        bio: "",
+        role: "Backend developer",
+        bio: "Computer Science student passionate about building innovative and reliable digital experiences.",
         avatar: "SA",
         color: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-        page: ""
+        page: "sad_chemloul_alaa.html"
     },
     {
         name: "Chebaani Youcef",
@@ -57,6 +57,7 @@ function createTeamCards() {
             <p class="member-role">${member.role}</p>
             <p class="member-bio">${member.bio}</p>
             <span class="view-profile">View Profile</span>
+            
         `;
         
         teamGrid.appendChild(card);
