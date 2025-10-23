@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khellaf Dhoha · Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0f0c29;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            overflow: hidden;
+        }
+
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.4;
+            animation: float 25s infinite ease-in-out;
+        }
+
+        .circle-1 {
+            width: 500px;
+            height: 500px;
+            top: -10%;
+            left: -5%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            animation-delay: 0s;
+        }
+
+        .circle-2 {
+            width: 400px;
+            height: 400px;
+            top: 50%;
+            right: -10%;
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            animation-delay: 8s;
+        }
+
+        .circle-3 {
+            width: 450px;
+            height: 450px;
+            bottom: -15%;
+            left: 40%;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            animation-delay: 16s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+            33% { transform: translate(100px, -80px) scale(1.1) rotate(120deg); }
+            66% { transform: translate(-80px, 100px) scale(0.9) rotate(240deg); }
+        }
+
+        .profile-container {
+            position: relative;
+            z-index: 1;
+            max-width: 1100px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px) saturate(180%);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            padding: 24px;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 20px;
+            transition: all 0.5s ease;
+        }
+        
+        @media (max-width: 900px) {
+            body {
+                align-items: flex-start;
+                padding: 40px 10px;
+                overflow-y: auto;
+            }
+            .profile-container {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+        }
+        
+        .profile-container:hover {
+             box-shadow: 
+                0 30px 80px rgba(0, 0, 0, 0.4),
+                0 0 40px rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .sidebar {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #fff;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+        
+        .profile-container:hover .avatar {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .name {
+            font-size: 22px;
+            font-weight: 800;
+            margin: 0 0 4px;
+        }
+
+        .role {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 14px;
+            letter-spacing: 1.5px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+            margin-bottom: 14px;
+        }
+
+        .chip {
+            padding: 5px 10px;
+            font-size: 11px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .links {
+            margin-top: auto;
+            padding-top: 14px;
+        }
+
+        .links a {
+            display: inline-block;
+            padding: 8px 14px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1.5px solid rgba(255, 255, 255, 0.25);
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            color: #fff;
+            margin: 4px;
+        }
+
+        .links a:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: scale(1.05);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .main-content {
+            display: grid;
+            gap: 14px;
+            grid-template-rows: auto 1fr;
+        }
+        
+        .main-grid-bottom {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            align-items: start;
+        }
+
+        .projects-column {
+            display: grid;
+            gap: 14px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 18px;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .card h2 {
+            margin: 0 0 10px;
+            font-size: 17px;
+            letter-spacing: .3px;
+            font-weight: 700;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .card p, .card ul {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            opacity: 0.85;
+            font-weight: 300;
+        }
+        
+        .card ul {
+            list-style-position: inside;
+            padding-left: 0;
+        }
+        
+        .card li {
+            margin-bottom: 6px;
+        }
+        
+        .card li:last-child {
+            margin-bottom: 0;
+        }
+
+        .card li b {
+            font-weight: 600;
+            color: #f0f0f0;
+        }
+
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.4",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+<body>
+    <div class="background-animation">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
+
+    <div class="profile-container">
+        <aside class="sidebar">
+            <div class="avatar">KD</div>
+            <div class="name">Dhoha KHELLAF</div>
+            <div class="role">AI Engineering and Data Science Student</div>
+            <div class="chips">
+                <span class="chip">C++</span>
+                <span class="chip">HTML/CSS</span>
+                <span class="chip">Python</span>
+                <span class="chip">PHP</span>
+                <span class="chip">JavaScript</span>
+                <span class="chip">Git & GitHub</span>
+            </div>
+            <div class="links">
+                <a href="https://github.com/khDhoha" target="_blank" rel="noopener">GitHub ↗</a>
+                <a href="https://www.linkedin.com/in/dhoha-khellaf-372861297/" target="_blank" rel="noopener">LinkedIn ↗</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="card">
+                <h2>About Me</h2>
+                <p>I am Dhoha, a passionate AI engineering student at ENSIA. I enjoy exploring technology, understanding how systems work, and creating meaningful solutions through programming and data. I love learning new things that challenge me to grow. My goal is to build projects that connect technology with creativity and real impact.</p>
+            </section>
+
+            <div class="main-grid-bottom">
+                <section class="card">
+                    <h2>Technical Skills</h2>
+                    <ul>
+                        <li><b>C++</b> – Strong foundation in object-oriented programming and algorithmic problem-solving.</li>
+                        <li><b>Python</b> – Skilled in data analysis and AI-focused development.</li>
+                        <li><b>JavaScript</b> – Experienced in creating dynamic, interactive web features.</li>
+                        <li><b>HTML/CSS</b> – Proficient in building responsive and accessible front-end designs.</li>
+                        <li><b>PHP</b> – Capable of developing and maintaining server-side web applications.</li>
+                        <li><b>SQL</b> – Competent in database design, querying, and data manipulation.</li>
+                        <li><b>DSA (Data Structures & Algorithms)</b> – Strong grasp of computational logic and performance optimization.</li>
+                    </ul>
+                </section>
+                <div class="projects-column">
+                    <section class="card">
+                        <h2>Current Projects</h2>
+                        <ul>
+                            <li><b>Software Engineering : </b>Quranic school Management system</li>
+                            <li><b>Mobile Development : </b>Snoopy: An all in one mobile app for pet owners</li>
+                            <li><b>Data Mining : </b>The Application of Data Analysis on a real life problem</li>
+                        </ul>
+                    </section>
+        
+                    <section class="card">
+                        <h2>Previous Projects</h2>
+                        <ul>
+                            <li><b>Artificial intelligence : </b>Stock Market Investment Optimization Application that helps users allocate their investments across multiple companies to maximize return on investment. </li>
+                            <li><b>Web Development : </b>Tech Artistrya platform designed to connect freelancers with clients.</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
