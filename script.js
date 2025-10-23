@@ -15,13 +15,13 @@ const teamMembers = [
         color: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
         page: "sad_chemloul_alaa.html"
     },
-    {
+     {
         name: "Chebaani Youcef",
-        role: "",
-        bio: "",
+        role: "Ui/Ux Designer  Frontend Developer",
+        bio: "Designer, Frontend Developer experience in building brands from design to deployment.",
         avatar: "CY",
         color: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
-        page: "member3.html"
+        page: "chebaani-youcef/index.html"
     },
     {
         name: "Kellaf Dhoha",
