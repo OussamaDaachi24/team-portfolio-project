@@ -4,13 +4,13 @@ A **public repository** for collaboratively building a portfolio website represe
 
 ## 👥 Team Members
 
-| Name | Role | GitHub Username |
-|------|------|-----------------|
-| **Daachi Oussama** | Team Leader | [OussamaDaachi24](https://github.com/OussamaDaachi24) |
-| **Chebaani Youcef** | Member | [Sad-Chemloul-Alaa](https://github.com/Sad-Chemloul-Alaa) |
-| **Saad-Chemloul Alaa** | Member | [YoucefJimmy](https://github.com/YoucefJimmy) |
-| **Khellaf Dhoha** | Member | [khDhoha](https://github.com/khDhoha) |
-| **Redhoua Ghezlene** | Member | [GhezleneGasmi](https://github.com/GhezleneGasmi) |
+| Name                   | Role        | GitHub Username                                           |
+| ---------------------- | ----------- | --------------------------------------------------------- |
+| **Daachi Oussama**     | Team Leader | [OussamaDaachi24](https://github.com/OussamaDaachi24)     |
+| **Saad-Chemloul Alaa** | Member      | [Sad-Chemloul-Alaa](https://github.com/Sad-Chemloul-Alaa) |
+| **Chebaani Youcef**    | Member      | [jiiyoucefmii](https://github.com/jiiyoucefmii)           |
+| **Khellaf Dhoha**      | Member      | [khDhoha](https://github.com/khDhoha)                     |
+| **Redhoua Ghezlene**   | Member      | [GhezleneGasmi](https://github.com/GhezleneGasmi)         |
 
 ---
 
@@ -23,9 +23,9 @@ The goal is to design, implement, and deploy a **team portfolio website** using 
 
 ## ⚙️ Tech Stack
 
-- HTML  
-- CSS  
-- Git & GitHub  
+- HTML
+- CSS
+- Git & GitHub
 
 ---
 
