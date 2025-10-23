@@ -5,7 +5,7 @@ const teamMembers = [
         bio: "Backend engineer , experience in developing REST API's and building scalable systems",
         avatar: "DO",
         color: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-        page: "/Oussama_portfolio/oussama.html"
+        page: "daachi_oussama_portfolio.html"
     },
     {
         name: "Sad-Chemloul Alaa ",
