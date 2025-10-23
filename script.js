@@ -29,7 +29,7 @@ const teamMembers = [
         bio: "",
         avatar: "KD",
         color: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
-        page: "member4.html"
+        page: "dhoha-khellaf.html"
     },
     {
         name: "Redhoua Ghezlene",
@@ -37,7 +37,7 @@ const teamMembers = [
         bio: "",
         avatar: "RG",
         color: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
-        page: "member5.html"
+        page: "ghezlene-gasmi.html"
     }
 ];
 
